@@ -8,6 +8,10 @@
     Built with ❤︎ by <a href="https://www.linkedin.com/in/gergely-nagy-9a8198117/">Gergely Nagy </a> and <a href=""> contributors. </a>
 </div>
 
+<div align="center">
+    Inspired by <a href="https://github.com/FaridSafi">FaridSafi</a>'s <a href="https://github.com/FaridSafi/react-native-basketball"> react-native-basketball</a>
+</div>
+
 <br />
 
 ## Table of Content
