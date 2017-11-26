@@ -1,6 +1,18 @@
 import React from 'react';
-import { StyleSheet, Text, View, TouchableWithoutFeedback  } from 'react-native';
+import { StyleSheet, View, TouchableWithoutFeedback, Dimensions } from 'react-native';
 import Scoreboard from './components/Scoreboard';
+import Emoji from './components/Emoji';
+
+const EMOJI_Y = Dimensions.get('window').height - 300;
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#fff',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+});
 
 export default class Football extends React.Component {
   constructor(props) {
@@ -15,10 +27,10 @@ export default class Football extends React.Component {
 
   addScore = () => {
     let newScore = this.state.score + 1;
-    if (this.state.score === 10){
+    if (this.state.score === 10) {
       this.setState({ score: 0, standby: true });
     } else {
-      this.setState({ score: newScore, standby: false })
+      this.setState({ score: newScore, standby: false });
     }
   }
 
@@ -31,17 +43,12 @@ export default class Football extends React.Component {
             standby={this.state.standby}
             best={this.state.best}
           />
+          <Emoji
+            y={EMOJI_Y}
+            score={this.state.score}
+          />
         </View>
       </TouchableWithoutFeedback>
     );
   }
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
