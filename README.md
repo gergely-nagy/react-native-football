@@ -29,6 +29,7 @@ Pre-alpha and under heavy development, do not use!
 - [x] 🏆 <strong>Scoreboard: </strong> Current best score.
 - [ ] 😍 <strong>Emoji: </strong> Use emoji for press response.
 - [ ] ⚽ <strong>Ball: </strong>
+- [ ] :rocket: <strong>Physics: </strong>
 - [ ] ✔️ <strong>Test: </strong> Adding tests.
 
 ## Installation
