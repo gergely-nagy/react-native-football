@@ -4,7 +4,10 @@ import { View, Text, StyleSheet, Dimensions } from 'react-native';
 class Scoreboard extends Component {
   render() {
     return (
-      <View style={[styles.scoreContainer, { top: 100, width: Dimensions.get('window').width }]}>
+      <View
+        pointerEvents="none"
+        style={[styles.scoreContainer, { top: 100, width: Dimensions.get('window').width }]}
+      >
         <Text style={[{
           flex: 1,
           fontSize: 30,
