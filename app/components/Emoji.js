@@ -20,7 +20,9 @@ class Emoji extends Component {
 
   componentWillReceiveProps(nextProps) {
     this.setState({
-      emoji: this.getRandomEmoji(true),
+      emoji: this.getRandomEmoji(false),
+      y: nextProps.y,
+      x: nextProps.x - 50
     });
 
     this.state.relativeY.setValue(INITIAL_Y);
@@ -32,29 +34,31 @@ class Emoji extends Component {
 
     Animated.timing(
       this.state.relativeY,
-      { toValue: 60 }
+      { toValue: 120 }
     ).start();
   }
 
   getRandomEmoji (isHappy) {
     if (isHappy) {
-      const random = Math.floor(Math.random() * (happy.length + 1)) + 0;
+      const random = Math.floor(Math.random() * (happy.length)) + 0;
       console.log(random);
       return happy[random];
     } else {
-      const random = Math.floor(Math.random() * (sad.length + 1)) + 0;
+      const random = Math.floor(Math.random() * (sad.length)) + 0;
       return sad[random];
     }
   }
 
   render() {
     return (
-      <View style={[styles.emojiContainer, {
-        bottom: this.state.y,
-        width: 100,
-        height: 100,
-        left: this.state.x
-      }]}
+      <View
+        pointerEvents="none"
+        style={[styles.emojiContainer, {
+          bottom: this.state.y,
+          width: 100,
+          height: 200,
+          left: this.state.x,
+        }]}
       >
         <Animated.Text style={[{
           fontSize: 35,
