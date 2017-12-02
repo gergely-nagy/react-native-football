@@ -27,16 +27,17 @@ Pre-alpha and under heavy development, do not use!
 
 ## Features
 - [x] 🏆 <strong>Scoreboard: </strong> Current best score.
-- [ ] 😍 <strong>Emoji: </strong> Use emoji for press response.
-- [ ] ⚽ <strong>Ball: </strong>
-- [ ] :rocket: <strong>Physics: </strong>
-- [ ] ✔️ <strong>Test: </strong> Adding tests.
+- [x] 😍 <strong>Emoji: </strong> Use emoji for press response.
+- [x] ⚽ <strong>Ball: </strong> Add soccer ball.
+- [ ] :rocket: <strong>Physics: </strong> Add gravity and handle collision.
+- [ ] ✔️ <strong>Test: </strong> Add tests.
 
 ## Installation
 
 ```
 $ git clone https://github.com/gergely-nagy/react-native-football.git
 $ cd react-native-football/
+$ npm install
 $ npm start
 ```
 
